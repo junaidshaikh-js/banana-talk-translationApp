@@ -1,1 +1,85 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Inconsolata", monospace;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.wrapper header {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  background-color: #f2c94c;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.wrapper main {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wrapper main textarea,
+.wrapper main div:last-child.translated-text {
+  height: 150px;
+  width: 400px;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+.wrapper main > * {
+  margin: 0.6rem;
+}
+
+.wrapper main button {
+  align-self: flex-start;
+  padding: 0.8rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font: 1.2rem bold;
+  background-color: #f2c94c;
+  cursor: pointer;
+}
+
+.wrapper main div:last-child.translated-text {
+  height: 100px;
+  margin-top: 1rem;
+  border: 2px solid black;
+}
+
+.wrapper footer {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f2c94c;
+}
+
+.wrapper footer h2 {
+  margin-bottom: 1rem;
+}
+
+.wrapper footer p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */
