@@ -16,7 +16,7 @@ function constructUrl(text) {
 const translateText = () => {
   const userText = userInput.value;
 
-  if (!userText) {
+  if (userText == "") {
     alert("Please Enter Some Text");
   }
 
@@ -25,12 +25,13 @@ const translateText = () => {
   fetch(urlString)
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       const translatedText = data.contents.translated;
       outputBox.innerHTML = translatedText;
     })
-    .catch(() => {
-      alert(`error occured: ${error} 
-        Please try again after some time.`);
+    .catch((e) => {
+      alert(`error occured: ${e} 
+Please try again after some time.`);
     });
 };
 
