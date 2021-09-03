@@ -18,21 +18,21 @@ const translateText = () => {
 
   if (userText == "") {
     alert("Please Enter Some Text");
+  } else {
+    const urlString = constructUrl(userText);
+
+    fetch(urlString)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const translatedText = data.contents.translated;
+        outputBox.innerHTML = translatedText;
+      })
+      .catch((e) => {
+        alert(`error occured: ${e} 
+  Please try again after some time.`);
+      });
   }
-
-  const urlString = constructUrl(userText);
-
-  fetch(urlString)
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      const translatedText = data.contents.translated;
-      outputBox.innerHTML = translatedText;
-    })
-    .catch((e) => {
-      alert(`error occured: ${e} 
-Please try again after some time.`);
-    });
 };
 
 translateBtn.addEventListener("click", translateText);
