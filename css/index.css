@@ -60,6 +60,10 @@ body {
   cursor: pointer;
 }
 
+.wrapper main button:focus {
+  border: 2px dotted black;
+}
+
 .wrapper main div:last-child.translated-text {
   height: 100px;
   margin-top: 1rem;
