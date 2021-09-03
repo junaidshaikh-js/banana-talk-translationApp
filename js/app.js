@@ -24,7 +24,6 @@ const translateText = () => {
     fetch(urlString)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         const translatedText = data.contents.translated;
         outputBox.innerHTML = translatedText;
       })
